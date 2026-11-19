@@ -735,19 +735,31 @@
     <!-- ===================================================================== -->
     <!-- MODAL 3: PAPARAN PENUH CARTA ORGANISASI                               -->
     <!-- ===================================================================== -->
-    <div id="carta-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/80 backdrop-blur-sm p-4">
-        <div class="bg-white rounded-2xl max-w-6xl w-full shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[92vh]">
-            <div class="bg-slate-900 text-white px-6 py-3.5 flex items-center justify-between shrink-0">
-                <h3 class="font-bold text-sm sm:text-base">Carta Organisasi Jawatankuasa Pengurusan Akreditasi dan Pensijilan</h3>
-                <button onclick="closeModal('carta-modal')" class="text-white/80 hover:text-white p-1.5 rounded-lg hover:bg-white/10 transition">
-                    <i class="fa-solid fa-xmark text-lg"></i>
+    <section id="carta-organisasi" class="space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div>
+                    <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                        <span class="w-2 h-6 bg-amber-500 rounded-full inline-block"></span>
+                        Carta Organisasi Jawatankuasa Pengurusan Akreditasi dan Persijilan
+                    </h2>
+                    <p class="text-sm text-slate-500">Struktur tadbir urus Jawatankuasa Pengurusan Akreditasi dan Persijilan, Politeknik Tuanku Syed Sirajuddin.</p>
+                </div>
+                <button onclick="openCartaModal()" class="self-start sm:self-auto inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold bg-slate-900 text-white rounded-xl hover:bg-slate-800 transition shadow-sm">
+                    <i class="fa-solid fa-expand"></i> Paparan Penuh Carta
                 </button>
             </div>
-            <div class="p-4 overflow-auto bg-slate-100 flex-1 flex items-center justify-center">
-                <img src="carta.png" alt="Carta Organisasi Akreditasi dan Persijilan" class="max-w-full h-auto rounded-xl shadow-md" onerror="this.onerror=null; this.src='https://placehold.co/1200x675/f8fafc/0f294a?text=Sila+Letakkan+Fail+Imej+carta.png';">
+
+            <!-- Paparan Imej Rasmi carta.png -->
+            <div class="bg-white rounded-2xl p-4 sm:p-6 border border-slate-200/80 shadow-sm">
+                <div class="w-full flex flex-col items-center justify-center">
+                    <img src="carta.png" 
+                         alt="Carta Organisasi Jawatankuasa Pengurusan Akreditasi dan Persijilan PTSS" 
+                         class="w-full max-w-5xl h-auto rounded-xl border border-slate-200 shadow-sm cursor-zoom-in"
+                         onclick="openCartaModal()"
+                         onerror="this.onerror=null; this.src='https://placehold.co/1200x675/f8fafc/0f294a?text=Sila+Letakkan+Fail+Imej+carta.png';">
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
 
     <!-- JavaScript Data & Logik Interaktif -->
     <script>

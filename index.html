@@ -161,31 +161,44 @@
                 <div>
                     <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
                         <span class="w-2 h-6 bg-blue-600 rounded-full inline-block"></span>
-                        Rumusan Bilangan Program & Pensijilan
+                        Rumusan Bilangan Program & Persijilan
                     </h2>
                     <p class="text-sm text-slate-500">Taburan rekod akreditasi mengikut Badan Akreditasi dan Status Tempoh Sah Laku.</p>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-                <!-- Carta Bar: Bilangan Rekod Mengikut Badan Akreditasi & Status -->
-                
-                <!-- Carta Donut: Pecahan Badan Akreditasi & Pengiktirafan -->
-                <div class="lg:col-span-5 bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-base font-bold text-slate-800">Pecahan Badan Akreditasi (26 Rekod)</h3>
-                        <p class="text-xs text-slate-500">Komposisi pengiktirafan MQA, ETAC dan MBOT di PTSS</p>
-                    </div>
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6 my-2">
-                        <div id="donut-chart-container" class="w-48 h-48 relative shrink-0"></div>
-                        <div id="donut-legend" class="space-y-2.5 w-full"></div>
-                    </div>
-                    <div class="pt-3 border-t border-slate-100 text-xs text-slate-500 flex justify-between">
-                        <span>Rujukan Pangkalan Data:</span>
-                        <span class="font-semibold text-slate-700">Senarai Persijilan Akreditasi PTSS</span>
-                    </div>
-                </div>
+            <div class="grid grid-cols-1 gap-6">
+    <!-- Carta Donut: Pecahan Badan Akreditasi & Pengiktirafan -->
+    <div class="w-full bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex flex-col justify-between">
+
+        <div>
+            <h3 class="text-base font-bold text-slate-800">
+                Pecahan Badan Akreditasi (26 Rekod)
+            </h3>
+            <p class="text-xs text-slate-500">
+                Komposisi pengiktirafan MQA, ETAC dan MBOT di PTSS
+            </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 my-4 w-full">
+            <div id="donut-chart-container"
+                 class="w-48 h-48 relative shrink-0">
             </div>
+
+            <div id="donut-legend"
+                 class="space-y-2.5 w-full sm:flex-1">
+            </div>
+        </div>
+
+        <div class="pt-3 border-t border-slate-100 text-xs text-slate-500 flex flex-col sm:flex-row justify-between gap-2">
+            <span>Rujukan Pangkalan Data:</span>
+            <span class="font-semibold text-slate-700">
+                Senarai Persijilan Akreditasi PTSS
+            </span>
+        </div>
+
+    </div>
+</div>
         </section>
 
         <!-- SEKSYEN 2: JADUAL TERPERINCI PENSIJILAN PROGRAM -->

@@ -97,281 +97,6 @@
         </div>
 
         <!-- Kad KPI Ringkasan -->
-        <section class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm hover:shadow-md transition">
-                <div class="flex items-center justify-between">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Jumlah Program Aktif</span>
-                    <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
-                        <i class="fa-solid fa-graduation-cap text-lg"></i>
-                    </div>
-                </div>
-                <div class="mt-3 flex items-baseline gap-2">
-                    <span id="kpi-total" class="text-3xl font-extrabold text-slate-900">16</span>
-                    <span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">100% Diiktiraf</span>
-                </div>
-                <p class="text-xs text-slate-500 mt-1">Merangkumi 6 Jabatan Akademik Utama</p>
-            </div>
-
-            <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm hover:shadow-md transition">
-                <div class="flex items-center justify-between">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Akreditasi Penuh (MQA)</span>
-                    <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
-                        <i class="fa-solid fa-certificate text-lg"></i>
-                    </div>
-                </div>
-                <div class="mt-3 flex items-baseline gap-2">
-                    <span id="kpi-mqa" class="text-3xl font-extrabold text-slate-900">16</span>
-                    <span class="text-xs font-medium text-slate-500">Tersenarai MQR</span>
-                </div>
-                <p class="text-xs text-slate-500 mt-1">Malaysian Qualifications Register</p>
-            </div>
-
-            <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm hover:shadow-md transition">
-                <div class="flex items-center justify-between">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Badan Profesional (ETAC/MBOT)</span>
-                    <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center">
-                        <i class="fa-solid fa-shield-halved text-lg"></i>
-                    </div>
-                </div>
-                <div class="mt-3 flex items-baseline gap-2">
-                    <span id="kpi-pro" class="text-3xl font-extrabold text-slate-900">9</span>
-                    <span class="text-xs font-medium text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full">ETAC & MBOT</span>
-                </div>
-                <p class="text-xs text-slate-500 mt-1">Kejuruteraan & Teknologi</p>
-            </div>
-        </section>
-
-        <!-- SEKSYEN 1: RUMUSAN BILANGAN PROGRAM BERSERTA PENSIJILAN (GRAFIK) -->
-        <section id="rumusan-grafik" class="space-y-4">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                <div>
-                    <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
-                        <span class="w-2 h-6 bg-blue-600 rounded-full inline-block"></span>
-                        Rumusan Bilangan Program & Pensijilan
-                    </h2>
-                    <p class="text-sm text-slate-500">Pecahan Badan Akreditasi Utama bagi 16 Program Pengajian Terkini di PTSS (Rujukan: RUMUSAN.docx).</p>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 gap-6">
-                <!-- Carta Donut: Pecahan Badan Akreditasi Utama (RUMUSAN.docx) -->
-                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
-                        <div>
-                            <h3 class="text-base sm:text-lg font-bold text-slate-800">Pecahan Badan Akreditasi Utama (16 Program Terkini)</h3>
-                            <p class="text-xs text-slate-500">Komposisi pengiktirafan MQA, ETAC dan MBOT berdasarkan Senarai Program Terkini di PTSS</p>
-                        </div>
-                        <span class="self-start sm:self-auto text-xs font-semibold px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
-                            Sumber: RUMUSAN.docx
-                        </span>
-                    </div>
-                    <div class="flex flex-col md:flex-row items-center justify-center gap-8 my-4 max-w-4xl mx-auto w-full">
-                        <div id="donut-chart-container" class="w-56 h-56 relative shrink-0"></div>
-                        <div id="donut-legend" class="space-y-3 w-full"></div>
-                    </div>
-                    <div class="pt-3 border-t border-slate-100 text-xs text-slate-500 flex flex-col sm:flex-row justify-between gap-1">
-                        <span>Rujukan Pangkalan Data:</span>
-                        <span class="font-semibold text-slate-700">Senarai Program Terkini di PTSS (16 Program Aktif)</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEKSYEN 2: JADUAL TERPERINCI PENSIJILAN PROGRAM -->
-        <section id="jadual-pensijilan" class="space-y-4">
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
-                <div>
-                    <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
-                        <span class="w-2 h-6 bg-emerald-600 rounded-full inline-block"></span>
-                        Perincian Akreditasi & Pensijilan Program
-                    </h2>
-                    <p class="text-sm text-slate-500">Klik butang <strong>MQR</strong> atau <strong>Salinan Sijil</strong> untuk memaparkan dokumen rasmi (Dokumen Detail).</p>
-                </div>
-
-                <!-- Kawalan Carian & Penapis -->
-                <div class="flex flex-col sm:flex-row gap-2.5 w-full md:w-auto">
-                    <div class="relative flex-1 sm:w-64">
-                        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
-                        <input type="text" id="search-input" placeholder="Cari kod / nama program..." 
-                            class="w-full pl-9 pr-4 py-2 text-sm bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
-                    </div>
-                    <select id="dept-filter" class="px-3.5 py-2 text-sm bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-700 font-medium">
-                        <option value="ALL">Semua Jabatan</option>
-                        <option value="JKE">Jabatan Kejuruteraan Elektrik (JKE)</option>
-                        <option value="JKM">Jabatan Kejuruteraan Mekanikal (JKM)</option>
-                        <option value="JTMK">Jabatan Teknologi Maklumat & Komunikasi (JTMK)</option>
-                        <option value="JP">Jabatan Perdagangan (JP)</option>
-                        <option value="JPH">Jabatan Pelancongan & Hospitaliti (JPH)</option>
-                        <option value="JRKV">Jabatan Rekabentuk & Komunikasi Visual (JRKV)</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Kad Jadual Responsif -->
-            <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-slate-900 text-white text-xs uppercase tracking-wider">
-                                <th class="py-3.5 px-4 font-semibold">Bil</th>
-                                <th class="py-3.5 px-4 font-semibold">Kod & Nama Program</th>
-                                <th class="py-3.5 px-4 font-semibold">Badan Akreditasi</th>
-                                <th class="py-3.5 px-4 font-semibold text-center">Bil. Kredit</th>
-                                <th class="py-3.5 px-4 font-semibold">Tempoh Sah Laku</th>
-                                <th class="py-3.5 px-4 font-semibold text-center">Paparan MQR</th>
-                                <th class="py-3.5 px-4 font-semibold text-center">Salinan Sijil</th>
-                            </tr>
-                        </thead>
-                        <tbody id="program-table-body" class="divide-y divide-slate-200 text-sm">
-                            <!-- Baris dijana melalui JavaScript -->
-                        </tbody>
-                    </table>
-                </div>
-                <!-- Keadaan Kosong (Jika carian tiada hasil) -->
-                <div id="empty-state" class="hidden py-12 px-4 text-center">
-                    <div class="w-12 h-12 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-3">
-                        <i class="fa-solid fa-folder-open text-xl"></i>
-                    </div>
-                    <h4 class="text-sm font-semibold text-slate-700">Tiada program ditemui</h4>
-                    <p class="text-xs text-slate-500 mt-1">Sila cuba kata kunci carian atau pilihan jabatan yang lain.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEKSYEN 3: CARTA ORGANISASI UNIT JAMINAN KUALITI PTSS -->
-        <section id="carta-organisasi" class="space-y-4">
-            <div>
-                <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
-                    <span class="w-2 h-6 bg-amber-500 rounded-full inline-block"></span>
-                    Carta Organisasi Unit Jaminan Kualiti (UJK)
-                </h2>
-                <p class="text-sm text-slate-500">Struktur tadbir urus Akreditasi dan Jaminan Kualiti Akademik, Politeknik Tuanku Syed Sirajuddin.</p>
-            </div>
-
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-white border-t border-slate-200 mt-12 py-6">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
-            <p>&copy; 2026 Unit Jaminan Kualiti, Politeknik Tuanku Syed Sirajuddin, Pauh Putra, Arau, Perlis.</p>
-            <p>Sistem Informasi Akreditasi & Pengiktirafan Akademik</p>
-        </div>
-    </footer>
-
-    <!-- ===================================================================== -->
-    <!-- MODAL 1: PAPARAN MQR (MALAYSIAN QUALIFICATIONS REGISTER)              -->
-    <!-- ===================================================================== -->
-    <div id="mqr-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4">
-        <div class="bg-white rounded-2xl max-w-xl w-full shadow-2xl border border-slate-200 overflow-hidden animate-[fadeIn_0.2s_ease-out]">
-            <!-- Header Modal -->
-            <div class="bg-blue-900 text-white px-6 py-4 flex items-center justify-between">
-                <div class="flex items-center gap-2.5">
-                    <div class="w-8 h-8 rounded-lg bg-white/15 flex items-center justify-center">
-                        <i class="fa-solid fa-globe text-blue-200"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-base leading-tight">Rekod Daftar Kelayakan Malaysia (MQR)</h3>
-                        <p class="text-xs text-blue-200">Agensi Kelayakan Malaysia (MQA)</p>
-                    </div>
-                </div>
-                <button onclick="closeModal('mqr-modal')" class="text-white/80 hover:text-white p-1.5 rounded-lg hover:bg-white/10 transition">
-                    <i class="fa-solid fa-xmark text-lg"></i>
-                </button>
-            </div>
-
-            <!-- Kandungan MQR -->
-            <div class="p-6 space-y-4">
-                <div class="flex items-center justify-between bg-blue-50 border border-blue-200 rounded-xl p-3.5">
-                    <div>
-                        <span class="text-xs text-blue-600 font-semibold uppercase">No. Rujukan MQR</span>
-                        <p id="mqr-ref" class="text-lg font-extrabold text-blue-950 font-mono">MQA/FA0123</p>
-                    </div>
-                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
-                        <i class="fa-solid fa-circle-check mr-1"></i>SAH & AKTIF
-                    </span>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
-                        <span class="text-xs text-slate-400 block">Nama Kelayakan</span>
-                        <span id="mqr-program" class="font-semibold text-slate-800 mt-0.5 block">-</span>
-                    </div>
-                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
-                        <span class="text-xs text-slate-400 block">Tahap MQF & Kredit</span>
-                        <span id="mqr-level" class="font-semibold text-slate-800 mt-0.5 block">Tahap 4 MQF (92 Kredit)</span>
-                    </div>
-                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
-                        <span class="text-xs text-slate-400 block">Institusi Penganugerah</span>
-                        <span class="font-semibold text-slate-800 mt-0.5 block">Politeknik Tuanku Syed Sirajuddin</span>
-                    </div>
-                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
-                        <span class="text-xs text-slate-400 block">Tarikh Mula Akreditasi</span>
-                        <span id="mqr-validity" class="font-semibold text-slate-800 mt-0.5 block">-</span>
-                    </div>
-                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 sm:col-span-2">
-                        <span class="text-xs text-slate-400 block">Bidang NEC (National Education Code)</span>
-                        <span id="mqr-nec" class="font-semibold text-slate-800 mt-0.5 block">-</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Footer Modal -->
-            <div class="bg-slate-50 px-6 py-3.5 border-t border-slate-200 flex items-center justify-between gap-2">
-                <button onclick="copyMqrRef()" class="px-3.5 py-2 text-xs font-semibold text-slate-700 bg-white border border-slate-300 rounded-xl hover:bg-slate-100 transition">
-                    <i class="fa-regular fa-copy mr-1.5"></i>Salin No. Rujukan
-                </button>
-                <button onclick="closeModal('mqr-modal')" class="px-4 py-2 text-xs font-semibold text-white bg-blue-600 rounded-xl hover:bg-blue-700 transition">
-                    Tutup Paparan
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===================================================================== -->
-    <!-- MODAL 2: PAPARAN SALINAN SIJIL AKREDITASI                             -->
-    <!-- ===================================================================== -->
-    <div id="cert-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/70 backdrop-blur-sm p-4">
-        <div class="bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[90vh]">
-            <!-- Header Modal -->
-            <div class="bg-slate-900 text-white px-6 py-3.5 flex items-center justify-between shrink-0">
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-file-shield text-amber-400"></i>
-                    <h3 class="font-bold text-sm sm:text-base">Salinan Digital Sijil Akreditasi</h3>
-                </div>
-                <button onclick="closeModal('cert-modal')" class="text-white/80 hover:text-white p-1.5 rounded-lg hover:bg-white/10 transition">
-                    <i class="fa-solid fa-xmark text-lg"></i>
-                </button>
-            </div>
-
-            <!-- Badan Sijil (Boleh Skrol) -->
-            <div class="p-4 sm:p-6 overflow-y-auto bg-slate-100 flex-1">
-                <!-- Bingkai Sijil Rasmi -->
-                <div id="printable-cert" class="bg-white border-8 border-double border-amber-600/80 p-6 sm:p-8 rounded-lg shadow-inner relative text-center space-y-4">
-                    <!-- Watermark Latar -->
-                    <div class="absolute inset-0 flex items-center justify-center opacity-[0.04] pointer-events-none">
-                        <i class="fa-solid fa-award text-[220px] text-slate-900"></i>
-                    </div>
-
-                    <div class="relative z-10 space-y-3">
-                        <div class="w-14 h-14 rounded-full bg-amber-50 border-2 border-amber-500 text-amber-700 flex items-center justify-center mx-auto">
-                            <i class="fa-solid fa-landmark text-2xl"></i>
-                        </div>
-
-                        <div>
-                    <h2 class="text-sm font-semibold text-blue-950">Status Pangkalan Data Akreditasi PTSS (Rujukan Rasmi UJK)</h2>
-                    <p class="text-xs text-blue-800 mt-0.5">
-                        Paparan merangkumi 26 rekod akreditasi program pengajian (MQA, ETAC, MBOT), pendaftaran MQR, serta salinan digital sijil akreditasi.
-                    </p>
-                </div>
-            </div>
-            <span class="text-xs font-medium bg-white text-blue-800 px-3 py-1.5 rounded-xl border border-blue-200 shadow-sm shrink-0">
-                <i class="fa-regular fa-calendar-check mr-1.5 text-blue-600"></i>Kemaskini: Nov 2026
-            </span>
-        </div>
-
-        <!-- Kad KPI Ringkasan -->
         <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm hover:shadow-md transition">
                 <div class="flex items-center justify-between">
@@ -560,7 +285,6 @@
                 </div>
             </div>
         </section>
-
     </main>
 
     <!-- Footer -->
@@ -733,35 +457,14 @@
     </div>
 
     <!-- ===================================================================== -->
-    <!-- MODAL 3: PAPARAN PENUH CARTA ORGANISASI                               -->
-    <!-- ===================================================================== -->
-    <section id="carta-organisasi" class="space-y-4">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                <div>
-                    <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
-                        <span class="w-2 h-6 bg-amber-500 rounded-full inline-block"></span>
-                        Carta Organisasi Jawatankuasa Pengurusan Akreditasi dan Persijilan
-                    </h2>
-                    <p class="text-sm text-slate-500">Struktur tadbir urus Jawatankuasa Pengurusan Akreditasi dan Persijilan, Politeknik Tuanku Syed Sirajuddin.</p>
-                </div>
-                <button onclick="openCartaModal()" class="self-start sm:self-auto inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold bg-slate-900 text-white rounded-xl hover:bg-slate-800 transition shadow-sm">
-                    <i class="fa-solid fa-expand"></i> Paparan Penuh Carta
-                </button>
-            </div>
+    <!-- Modal carta organisasi fullscreen -->
+    <div id="carta-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/90 p-3 sm:p-6" onclick="if(event.target===this) closeModal('carta-modal')">
+        <div class="relative bg-white rounded-xl max-w-7xl w-full max-h-[95vh] overflow-auto p-3 sm:p-5">
+            <button type="button" onclick="closeModal('carta-modal')" class="sticky top-0 float-right z-10 bg-slate-900 text-white rounded-lg px-3 py-2" aria-label="Tutup carta"><i class="fa-solid fa-xmark"></i> Tutup</button>
+            <img src="carta.png" alt="Carta Organisasi Jawatankuasa Pengurusan Akreditasi dan Persijilan PTSS" class="block w-full h-auto rounded-lg" onerror="this.onerror=null; this.src='https://placehold.co/1200x675/f8fafc/0f294a?text=Fail+carta.png+tidak+ditemui';">
+        </div>
+    </div>
 
-            <!-- Paparan Imej Rasmi carta.png -->
-            <div class="bg-white rounded-2xl p-4 sm:p-6 border border-slate-200/80 shadow-sm">
-                <div class="w-full flex flex-col items-center justify-center">
-                    <img src="carta.png" 
-                         alt="Carta Organisasi Jawatankuasa Pengurusan Akreditasi dan Persijilan PTSS" 
-                         class="w-full max-w-5xl h-auto rounded-xl border border-slate-200 shadow-sm cursor-zoom-in"
-                         onclick="openCartaModal()"
-                         onerror="this.onerror=null; this.src='https://placehold.co/1200x675/f8fafc/0f294a?text=Sila+Letakkan+Fail+Imej+carta.png';">
-                </div>
-            </div>
-        </section>
-
-    <!-- JavaScript Data & Logik Interaktif -->
     <script>
         // Data 27 Rekod Rasmi Program PTSS berdasarkan detail.docx
         const programsData = [
@@ -1216,6 +919,7 @@
         // Buka Modal Carta Organisasi Penuh
         function openCartaModal() {
             const modal = document.getElementById('carta-modal');
+            if (!modal) return;
             modal.classList.remove('hidden');
             modal.classList.add('flex');
         }
@@ -1279,11 +983,12 @@
             ];
 
             const donutContainer = document.getElementById('donut-chart-container');
+            if (!donutContainer) return;
             donutContainer.innerHTML = '';
             const dSize = 224;
             const radius = dSize / 2;
 
-            const dSvg = d3.select('#donut-chart-container')
+            const dSvg = d3.select(donutContainer)
                 .append('svg')
                 .attr('width', dSize)
                 .attr('height', dSize)
@@ -1349,4 +1054,3 @@
         window.addEventListener('resize', drawCharts);
     </script>
 </body>
-</html>
